@@ -29,6 +29,9 @@
                                     <constraint firstAttribute="width" secondItem="2Db-lj-O3L" secondAttribute="height" multiplier="46:11" id="IOL-5Y-C8A"/>
                                 </constraints>
                                 <state key="normal" image="SeeArtButton"/>
+                                <connections>
+                                    <action selector="launchArtGallery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXA-Ks-XBY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
