@@ -10,4 +10,6 @@ import UIKit
 
 class GalleryCVCell: UICollectionViewCell {
     
+    @IBOutlet weak var paintingThumbnailImageView: UIImageView!
+    
 }

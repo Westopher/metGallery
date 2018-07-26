@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,8 +51,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--GalleryVC-->
+        <scene sceneID="fbM-sz-63R">
+            <objects>
+                <viewController id="k3l-tX-J4U" customClass="GalleryVC" customModule="Met_Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6le-HV-u5F" userLabel="superView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5XK-V6-Qx5">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="77g-th-nCs">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="83E-nm-gjX" customClass="GalleryCVCell" customModule="Met_Gallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="di4-al-wQq">
+                                                    <rect key="frame" x="8" y="10" width="84" height="80"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="di4-al-wQq" secondAttribute="trailing" id="6vG-Lf-LKM"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="di4-al-wQq" secondAttribute="bottom" constant="2" id="Jeu-Um-V5T"/>
+                                            <constraint firstItem="di4-al-wQq" firstAttribute="leading" secondItem="83E-nm-gjX" secondAttribute="leadingMargin" id="bq3-Fd-650"/>
+                                            <constraint firstItem="di4-al-wQq" firstAttribute="top" secondItem="83E-nm-gjX" secondAttribute="topMargin" constant="2" id="iY1-2o-NIX"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="paintingThumbnailImageView" destination="di4-al-wQq" id="WeR-y1-BHL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="k3l-tX-J4U" id="Jot-JI-Dsn"/>
+                                    <outlet property="delegate" destination="k3l-tX-J4U" id="Zc3-2f-vza"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hD-wf-STU" userLabel="HomeButton">
+                                <rect key="frame" x="9.5" y="20.5" width="93.5" height="27.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1hD-wf-STU" secondAttribute="height" multiplier="3.4" id="SK0-yn-E36"/>
+                                </constraints>
+                                <state key="normal" image="HomeButton"/>
+                                <connections>
+                                    <action selector="dismissToHome:" destination="k3l-tX-J4U" eventType="touchUpInside" id="Z9q-At-FoY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5XK-V6-Qx5" firstAttribute="top" secondItem="YTY-JY-J9L" secondAttribute="top" constant="40" id="7An-0h-Zdz"/>
+                            <constraint firstItem="1hD-wf-STU" firstAttribute="centerY" secondItem="YTY-JY-J9L" secondAttribute="centerY" multiplier="0.1" id="JAh-46-MIy"/>
+                            <constraint firstItem="YTY-JY-J9L" firstAttribute="trailing" secondItem="5XK-V6-Qx5" secondAttribute="trailing" id="LZ7-Jg-sqq"/>
+                            <constraint firstItem="YTY-JY-J9L" firstAttribute="bottom" secondItem="5XK-V6-Qx5" secondAttribute="bottom" id="RZ3-Rb-hBW"/>
+                            <constraint firstItem="1hD-wf-STU" firstAttribute="width" secondItem="6le-HV-u5F" secondAttribute="width" multiplier="0.25" id="cjN-N3-omv"/>
+                            <constraint firstItem="1hD-wf-STU" firstAttribute="centerX" secondItem="YTY-JY-J9L" secondAttribute="centerX" multiplier="0.3" id="i9s-f6-JD2"/>
+                            <constraint firstItem="5XK-V6-Qx5" firstAttribute="leading" secondItem="YTY-JY-J9L" secondAttribute="leading" id="jTg-om-0C0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YTY-JY-J9L"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKH-Jb-rVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="133"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="HomeButton" width="100" height="30"/>
         <image name="SeeArtButton" width="169" height="44"/>
         <image name="SplashBackground" width="375" height="667"/>
     </resources>
