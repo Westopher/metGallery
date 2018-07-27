@@ -136,11 +136,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0DM-sv-A8K" userLabel="paintingImageView">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0DM-sv-A8K" userLabel="paintingImageView">
                                 <rect key="frame" x="18.5" y="37.5" width="337.5" height="337.5"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0DM-sv-A8K" secondAttribute="height" id="wgr-JV-wcc"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="s7S-ZC-pmS" appends="YES" id="SXk-Qy-2E4"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-uU-K71">
                                 <rect key="frame" x="20" y="442.5" width="140.5" height="27.5"/>
@@ -183,6 +187,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="rdb-Qm-8cu" firstAttribute="leading" secondItem="Hbw-ZW-FOZ" secondAttribute="leading" id="1OR-YJ-AVK"/>
                             <constraint firstItem="2NI-KF-gyR" firstAttribute="centerX" secondItem="RGL-Tn-hwl" secondAttribute="centerX" id="2So-bw-1xh"/>
@@ -204,9 +209,16 @@
                             <constraint firstItem="7HS-IQ-gdB" firstAttribute="width" secondItem="tdY-hV-eNb" secondAttribute="width" multiplier="0.1" id="uXf-hn-m5l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RGL-Tn-hwl"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="r6N-ox-ioL" appends="YES" id="F2P-by-qaK"/>
+                            <outletCollection property="gestureRecognizers" destination="JKX-jL-Omz" appends="YES" id="sDh-cu-gbX"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4E-V3-BhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="r6N-ox-ioL" userLabel="Right SGR"/>
+                <swipeGestureRecognizer direction="left" id="JKX-jL-Omz" userLabel="Left SGR"/>
+                <tapGestureRecognizer id="s7S-ZC-pmS" userLabel="FullPaintingTGR"/>
             </objects>
             <point key="canvasLocation" x="1674.4000000000001" y="132.68365817091455"/>
         </scene>
