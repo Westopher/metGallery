@@ -26,5 +26,13 @@ class PaintingDetailVC: UIViewController {
     @IBAction func lookupOnlineReference(_ sender: Any) {
     }
     
+    @IBAction func presentFullScreenPaintingVC(_ sender: Any) {
+    }
+    
+    @IBAction func swipeToNextPainting(_ sender: Any) {
+    }
+    
+    @IBOutlet var swipeToPreviousPainting: UISwipeGestureRecognizer!
+    
 }
 

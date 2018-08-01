@@ -225,12 +225,21 @@
                         <outlet property="paintingDateLabel" destination="Hbw-ZW-FOZ" id="57Y-Kx-8Jd"/>
                         <outlet property="paintingImageView" destination="0DM-sv-A8K" id="9lZ-Ny-Cx8"/>
                         <outlet property="paintingTitleLabel" destination="bbf-uU-K71" id="rGM-ht-GoF"/>
+                        <outlet property="swipeToPreviousPainting" destination="r6N-ox-ioL" id="feu-PZ-Kjj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4E-V3-BhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="r6N-ox-ioL" userLabel="Right SGR"/>
-                <swipeGestureRecognizer direction="left" id="JKX-jL-Omz" userLabel="Left SGR"/>
-                <tapGestureRecognizer id="s7S-ZC-pmS" userLabel="FullPaintingTGR"/>
+                <swipeGestureRecognizer direction="left" id="JKX-jL-Omz" userLabel="Left SGR">
+                    <connections>
+                        <action selector="swipeToNextPainting:" destination="gg1-Ag-Clv" id="B0g-VG-u0Q"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="s7S-ZC-pmS" userLabel="FullPaintingTGR">
+                    <connections>
+                        <action selector="presentFullScreenPaintingVC:" destination="gg1-Ag-Clv" id="5ke-tj-TjD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1674.4000000000001" y="132.68365817091455"/>
         </scene>
