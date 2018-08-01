@@ -9,27 +9,22 @@
 import UIKit
 
 class PaintingDetailVC: UIViewController {
-
+    
+    @IBOutlet weak var paintingImageView: UIImageView!
+    @IBOutlet weak var paintingTitleLabel: UILabel!
+    @IBOutlet weak var paintingArtistLabel: UILabel!
+    @IBOutlet weak var paintingDateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func dismissToGallery(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func lookupOnlineReference(_ sender: Any) {
+    }
+    
 }
+

@@ -170,6 +170,9 @@
                                     <constraint firstAttribute="width" secondItem="7HS-IQ-gdB" secondAttribute="height" id="1yA-6G-2wu"/>
                                 </constraints>
                                 <state key="normal" image="CloseButton"/>
+                                <connections>
+                                    <action selector="dismissToGallery:" destination="gg1-Ag-Clv" eventType="touchUpInside" id="1np-35-ljH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMO-hM-G5s" userLabel="OnlineReferenceButton">
                                 <rect key="frame" x="187.5" y="595" width="187.5" height="46.5"/>
@@ -177,6 +180,9 @@
                                     <constraint firstAttribute="width" secondItem="sMO-hM-G5s" secondAttribute="height" multiplier="4" id="Jqj-yu-9dX"/>
                                 </constraints>
                                 <state key="normal" image="OnlineReferenceButton"/>
+                                <connections>
+                                    <action selector="lookupOnlineReference:" destination="gg1-Ag-Clv" eventType="touchUpInside" id="sJz-Tt-yQP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap image to zoom, swipe for next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NI-KF-gyR">
                                 <rect key="frame" x="70.5" y="379" width="234" height="18"/>
@@ -214,6 +220,12 @@
                             <outletCollection property="gestureRecognizers" destination="JKX-jL-Omz" appends="YES" id="sDh-cu-gbX"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="paintingArtistLabel" destination="rdb-Qm-8cu" id="EKq-Z1-B9C"/>
+                        <outlet property="paintingDateLabel" destination="Hbw-ZW-FOZ" id="57Y-Kx-8Jd"/>
+                        <outlet property="paintingImageView" destination="0DM-sv-A8K" id="9lZ-Ny-Cx8"/>
+                        <outlet property="paintingTitleLabel" destination="bbf-uU-K71" id="rGM-ht-GoF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4E-V3-BhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="r6N-ox-ioL" userLabel="Right SGR"/>
