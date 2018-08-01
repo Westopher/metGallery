@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-lj-O3L" userLabel="SeeArtButton">
-                                <rect key="frame" x="99" y="391" width="176" height="42.5"/>
+                                <rect key="frame" x="99.5" y="391" width="176" height="42.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Db-lj-O3L" secondAttribute="height" multiplier="46:11" id="IOL-5Y-C8A"/>
                                 </constraints>
@@ -137,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0DM-sv-A8K" userLabel="paintingImageView">
-                                <rect key="frame" x="18.5" y="37.5" width="337.5" height="337.5"/>
+                                <rect key="frame" x="19" y="37.5" width="337.5" height="337.5"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0DM-sv-A8K" secondAttribute="height" id="wgr-JV-wcc"/>
@@ -165,7 +165,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HS-IQ-gdB" userLabel="DismissButton">
-                                <rect key="frame" x="19" y="599.5" width="37.5" height="37.5"/>
+                                <rect key="frame" x="19" y="599.5" width="37.5" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7HS-IQ-gdB" secondAttribute="height" id="1yA-6G-2wu"/>
                                 </constraints>
@@ -251,31 +251,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QE-Le-q3T">
-                                <rect key="frame" x="67" y="237" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QE-Le-q3T">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Z2h-82-U0s" id="0kY-7z-lvC"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCw-mc-7in" userLabel="DismissButton">
-                                <rect key="frame" x="-148" y="421.5" width="375" height="393.5"/>
+                                <rect key="frame" x="-165" y="418.5" width="375" height="393"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MCw-mc-7in" secondAttribute="height" multiplier="101:106" id="di2-PJ-ITW"/>
                                 </constraints>
                                 <state key="normal" image="CloseButton"/>
+                                <connections>
+                                    <action selector="dismissToPaintingDetail:" destination="Z2h-82-U0s" eventType="touchUpInside" id="fzB-nS-0F1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MCw-mc-7in" firstAttribute="centerX" secondItem="mS8-nc-fIr" secondAttribute="centerX" multiplier="0.21" id="RSc-2m-vAH"/>
+                            <constraint firstAttribute="trailing" secondItem="9QE-Le-q3T" secondAttribute="trailing" id="Cvo-iz-jqO"/>
+                            <constraint firstAttribute="bottom" secondItem="9QE-Le-q3T" secondAttribute="bottom" id="R6H-7d-fbw"/>
+                            <constraint firstItem="MCw-mc-7in" firstAttribute="centerX" secondItem="mS8-nc-fIr" secondAttribute="centerX" multiplier="0.12" id="RSc-2m-vAH"/>
+                            <constraint firstItem="9QE-Le-q3T" firstAttribute="leading" secondItem="79Z-yt-IOu" secondAttribute="leading" id="cOC-N0-dnV"/>
+                            <constraint firstItem="9QE-Le-q3T" firstAttribute="top" secondItem="79Z-yt-IOu" secondAttribute="top" id="hga-EC-mDA"/>
                             <constraint firstItem="MCw-mc-7in" firstAttribute="width" secondItem="79Z-yt-IOu" secondAttribute="width" id="jaR-JA-FvF"/>
-                            <constraint firstItem="MCw-mc-7in" firstAttribute="centerY" secondItem="mS8-nc-fIr" secondAttribute="centerY" multiplier="1.8" id="r7d-yR-sPV"/>
+                            <constraint firstItem="MCw-mc-7in" firstAttribute="centerY" secondItem="mS8-nc-fIr" secondAttribute="centerY" multiplier="1.79" id="r7d-yR-sPV"/>
+                            <constraint firstItem="MCw-mc-7in" firstAttribute="height" secondItem="79Z-yt-IOu" secondAttribute="height" multiplier="0.1" id="zv0-Ql-O3l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mS8-nc-fIr"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="RSc-2m-vAH"/>
                                 <exclude reference="r7d-yR-sPV"/>
+                                <exclude reference="zv0-Ql-O3l"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="zv0-Ql-O3l"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -284,7 +300,15 @@
                                 <include reference="r7d-yR-sPV"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="RSc-2m-vAH"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="paintingScrollView" destination="9QE-Le-q3T" id="Juv-vF-tIC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehe-oP-i4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
