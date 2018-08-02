@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GalleryVC: UIViewController {
+class GalleryVC: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
 
     override func viewDidLoad() { super.viewDidLoad() }
     
