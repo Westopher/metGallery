@@ -131,7 +131,7 @@
         <!--Painting DetailVC-->
         <scene sceneID="LS0-Vq-QuR">
             <objects>
-                <viewController id="gg1-Ag-Clv" customClass="PaintingDetailVC" customModule="Met_Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaintingDetailVC" id="gg1-Ag-Clv" customClass="PaintingDetailVC" customModule="Met_Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tdY-hV-eNb" userLabel="superView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -38,7 +38,8 @@ class GalleryVC: UIViewController, UICollectionViewDelegateFlowLayout, UICollect
         
         // MARK: - CollectionView Delegate Methods --------
         func collection(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            
+            let paintingDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PaintingDetailVC") as! PaintingDetailVC
+            paintingDetailVC.paintingIndex = indexPath.item 
         }
         
         
