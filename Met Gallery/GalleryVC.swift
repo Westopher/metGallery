@@ -9,19 +9,21 @@
 import UIKit
 
 class GalleryVC: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
+ 
+    
 
     override func viewDidLoad() { super.viewDidLoad() }
     
     @IBAction func dismissToHome(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
         
         // MARK: - CollectionView DataSource Methods --------
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> { return paintings.count } {
-            
-        }
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+ return paintings.count }
         
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt IndexPath: IndexPath) -> UICollectionViewCell {
-            let paintingCVCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCVCell", for: IndexPath) as! GalleryCVCell
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let paintingCVCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCVCell", for: indexPath) as! GalleryCVCell
             paintingCVCell.paintingThumbnailImageView.image = UIImage(named: paintings[indexPath.item].thumbName)
             paintingCVCell.layer.borderColor = UIColor.black.cgColor
             paintingCVCell.layer.borderWidth = 1
@@ -37,17 +39,13 @@ class GalleryVC: UIViewController, UICollectionViewDelegateFlowLayout, UICollect
         
         
         // MARK: - CollectionView Delegate Methods --------
-        func collection(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let paintingDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PaintingDetailVC") as! PaintingDetailVC
-            paintingDetailVC.paintingIndex = indexPath.item 
+            paintingDetailVC.paintingIndex = indexPath.item
+            paintingDetailVC.modalTransitionStyle = .flipHorizontal
+            present(paintingDetailVC, animated: true, completion: nil)
         }
         
         
-        
-        
-    }
-    
-    
-    
-
 }

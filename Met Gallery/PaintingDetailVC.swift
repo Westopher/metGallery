@@ -10,6 +10,9 @@ import UIKit
 
 class PaintingDetailVC: UIViewController {
     
+    var paintingIndex: Int!
+    var painting: Painting!
+    
     @IBOutlet weak var paintingImageView: UIImageView!
     @IBOutlet weak var paintingTitleLabel: UILabel!
     @IBOutlet weak var paintingArtistLabel: UILabel!
