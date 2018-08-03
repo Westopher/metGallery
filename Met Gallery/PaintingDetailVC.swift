@@ -23,11 +23,24 @@ class PaintingDetailVC: UIViewController {
         loadPaintingInfo()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        roundImageViewCorners(imageView: paintingImageView)
+    }
+    
     func loadPaintingInfo() {
         paintingImageView.image = UIImage(named: painting.imageName)
         paintingTitleLabel.text = painting.title
         paintingArtistLabel.text = painting.artist
         paintingDateLabel.text = painting.date
+    }
+    
+    func roundImageViewCorners(imageView: UIImageView) {
+        
+        imageView.layer.borderColor = UIColor(displayP3Red: 150/255, green: 150/255, blue: 150/255, alpha: 1).cgColor
+        imageView.layer.borderWidth = 1
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = paintingImageView.frame.width / 28
+        
     }
     
     @IBAction func dismissToGallery(_ sender: Any) {
