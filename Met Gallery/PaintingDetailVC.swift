@@ -20,10 +20,18 @@ class PaintingDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadPaintingInfo()
+    }
+    
+    func loadPaintingInfo() {
+        paintingImageView.image = UIImage(named: painting.imageName)
+        paintingTitleLabel.text = painting.title
+        paintingArtistLabel.text = painting.artist
+        paintingDateLabel.text = painting.date
     }
     
     @IBAction func dismissToGallery(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func lookupOnlineReference(_ sender: Any) {

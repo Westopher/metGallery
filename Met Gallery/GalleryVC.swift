@@ -10,8 +10,6 @@ import UIKit
 
 class GalleryVC: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
  
-    
-
     override func viewDidLoad() { super.viewDidLoad() }
     
     @IBAction func dismissToHome(_ sender: Any) {
@@ -39,7 +37,6 @@ class GalleryVC: UIViewController, UICollectionViewDelegateFlowLayout, UICollect
         
         
         // MARK: - CollectionView Delegate Methods --------
-    
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let paintingDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PaintingDetailVC") as! PaintingDetailVC
             paintingDetailVC.paintingIndex = indexPath.item

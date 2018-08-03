@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,14 +22,14 @@
                         <viewControllerLayoutGuide type="bottom" id="rmE-VT-saO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="superView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zqB-nH-6hh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-lj-O3L" userLabel="SeeArtButton">
-                                <rect key="frame" x="99.5" y="379" width="176" height="42"/>
+                                <rect key="frame" x="85" y="323" width="150" height="35.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Db-lj-O3L" secondAttribute="height" multiplier="46:11" id="IOL-5Y-C8A"/>
                                 </constraints>
@@ -64,11 +64,11 @@
                         <viewControllerLayoutGuide type="bottom" id="KQv-GB-ftA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6le-HV-u5F" userLabel="superView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5XK-V6-Qx5">
-                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="77g-th-nCs">
                                     <size key="itemSize" width="50" height="50"/>
@@ -107,7 +107,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hD-wf-STU" userLabel="HomeButton">
-                                <rect key="frame" x="9.5" y="20.5" width="93.5" height="27.5"/>
+                                <rect key="frame" x="8" y="16.5" width="80" height="23.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1hD-wf-STU" secondAttribute="height" multiplier="3.4" id="SK0-yn-E36"/>
                                 </constraints>
@@ -143,11 +143,11 @@
                         <viewControllerLayoutGuide type="bottom" id="q9O-Cw-9MG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tdY-hV-eNb" userLabel="superView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0DM-sv-A8K" userLabel="paintingImageView">
-                                <rect key="frame" x="19" y="31.5" width="337.5" height="337.5"/>
+                                <rect key="frame" x="16" y="26.5" width="288" height="288"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0DM-sv-A8K" secondAttribute="height" id="wgr-JV-wcc"/>
@@ -157,25 +157,25 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-uU-K71">
-                                <rect key="frame" x="20" y="435" width="140.5" height="27.5"/>
+                                <rect key="frame" x="20" y="370.5" width="140.5" height="27.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hbw-ZW-FOZ">
-                                <rect key="frame" x="20" y="546" width="102" height="20.5"/>
+                                <rect key="frame" x="20" y="470" width="102" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.78823529411764703" green="0.78823529411764703" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rdb-Qm-8cu">
-                                <rect key="frame" x="20" y="499.5" width="108" height="21"/>
+                                <rect key="frame" x="20" y="427" width="108" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.78823529410000004" green="0.78823529410000004" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HS-IQ-gdB" userLabel="DismissButton">
-                                <rect key="frame" x="19" y="581.5" width="37.5" height="38"/>
+                                <rect key="frame" x="16" y="495" width="32" height="32.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7HS-IQ-gdB" secondAttribute="height" id="1yA-6G-2wu"/>
                                 </constraints>
@@ -185,7 +185,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMO-hM-G5s" userLabel="OnlineReferenceButton">
-                                <rect key="frame" x="187.5" y="576.5" width="187.5" height="47"/>
+                                <rect key="frame" x="160" y="491" width="160" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sMO-hM-G5s" secondAttribute="height" multiplier="4" id="Jqj-yu-9dX"/>
                                 </constraints>
@@ -195,7 +195,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap image to zoom, swipe for next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NI-KF-gyR">
-                                <rect key="frame" x="70.5" y="373" width="234" height="18"/>
+                                <rect key="frame" x="43" y="318" width="234" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -261,11 +261,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xZq-Th-Tjm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="79Z-yt-IOu" userLabel="superView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QE-Le-q3T">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -273,7 +273,7 @@
                                 </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCw-mc-7in" userLabel="DismissButton">
-                                <rect key="frame" x="-165" y="400.5" width="375" height="393"/>
+                                <rect key="frame" x="-141" y="340.5" width="320" height="335.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MCw-mc-7in" secondAttribute="height" multiplier="101:106" id="di2-PJ-ITW"/>
                                 </constraints>
