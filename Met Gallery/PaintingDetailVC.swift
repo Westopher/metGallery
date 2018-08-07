@@ -54,6 +54,9 @@ class PaintingDetailVC: UIViewController {
     }
     
     @IBAction func presentFullScreenPaintingVC(_ sender: Any) {
+        let fullScreenPaintingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FullScreenPaintingVC") as! FullScreenPaintingVC
+        fullScreenPaintingVC.paintingImageView = UIImageView(image: UIImage(named: paintings[paintingIndex].imageName))
+        present(fullScreenPaintingVC, animated: true, completion: nil)
     }
     
     

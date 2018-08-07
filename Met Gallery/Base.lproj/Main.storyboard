@@ -257,7 +257,7 @@
         <!--Full Screen PaintingVC-->
         <scene sceneID="R17-ii-Tge">
             <objects>
-                <viewController id="Z2h-82-U0s" customClass="FullScreenPaintingVC" customModule="Met_Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FullScreenPaintingVC" id="Z2h-82-U0s" customClass="FullScreenPaintingVC" customModule="Met_Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rsG-Yl-71k"/>
                         <viewControllerLayoutGuide type="bottom" id="xZq-Th-Tjm"/>

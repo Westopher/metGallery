@@ -9,6 +9,8 @@
 import UIKit
 
 class FullScreenPaintingVC: UIViewController {
+    
+    var paintingImageView: UIImageView!
 
     @IBOutlet weak var paintingScrollView: UIScrollView!
     
