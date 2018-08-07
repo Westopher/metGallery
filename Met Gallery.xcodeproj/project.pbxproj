@@ -29,7 +29,7 @@
 		3D8471E8210A5A6A002C5CA9 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		3D8471EA210A5A93002C5CA9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		3D8471EC210A5ABA002C5CA9 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
-		3D8471EE210A5D9F002C5CA9 /* PaintingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingDetailVC.swift; sourceTree = "<group>"; };
+		3D8471EE210A5D9F002C5CA9 /* PaintingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingDetailVC.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		3D8471F0210A5DC3002C5CA9 /* FullScreenPaintingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPaintingVC.swift; sourceTree = "<group>"; };
 		3D8471F2210A5E03002C5CA9 /* GalleryCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */

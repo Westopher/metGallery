@@ -18,6 +18,8 @@ class PaintingDetailVC: UIViewController {
     @IBOutlet weak var paintingArtistLabel: UILabel!
     @IBOutlet weak var paintingDateLabel: UILabel!
     
+    enum SlideDirection { case previous ; case next }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPaintingInfo()
@@ -54,10 +56,36 @@ class PaintingDetailVC: UIViewController {
     @IBAction func presentFullScreenPaintingVC(_ sender: Any) {
     }
     
+    
     @IBAction func swipeToNextPainting(_ sender: Any) {
+        slideNewPainting(direction: .next)
     }
     
-    @IBOutlet var swipeToPreviousPainting: UISwipeGestureRecognizer!
+    @IBAction func swipeToPreviousPainting(_ sender: Any) {
+        slideNewPainting(direction: .previous)
+    }
     
-}
+    
+    func slideNewPainting(direction: SlideDirection) {
+        var slidingPaintingIndex = direction == .next ? paintingIndex + 1 : paintingIndex - 1
+        if direction == .next && slidingPaintingIndex == -1 { slidingPaintingIndex = paintings.count - 1 }
+        
+        let slidingPaintingImageView = UIImageView(image: UIImage(named: paintings[slidingPaintingIndex].imageName))
+        slidingPaintingImageView.contentMode = .scaleAspectFill
+        roundImageViewCorners(imageView: slidingPaintingImageView)
+        slidingPaintingImageView.frame = CGRect(x: direction == .next ? view.frame.width : -paintingImageView.frame.width, y: paintingImageView.frame.origin.y, width: paintingImageView.frame.width, height: paintingImageView.frame.height)
+        view.addSubview(slidingPaintingImageView)
+        UIView.animate(withDuration: 0.3, animations: { slidingPaintingImageView.frame = CGRect(x: self.paintingImageView.frame.origin.x, y: self.paintingImageView.frame.origin.y, width: self.paintingImageView.frame.width, height: self.paintingImageView.frame.height) },
+                       completion: { _ in
+                        self.paintingIndex = slidingPaintingIndex
+                        self.painting = paintings[slidingPaintingIndex]
+                        self.loadPaintingInfo()
+                        slidingPaintingImageView.removeFromSuperview()
+        })
+        
+    }
+    }
+    
+    
+
 
