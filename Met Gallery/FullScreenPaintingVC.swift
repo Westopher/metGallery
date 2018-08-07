@@ -60,6 +60,10 @@ class FullScreenPaintingVC: UIViewController, UIScrollViewDelegate {
     }
 
     @IBAction func dismissToPaintingDetail(_ sender: Any) {
+        fullScreenSetToLandscapeMode = device.orientation == UIDeviceOrientation.portrait ? false : true
+        if fullScreenSetToLandscapeMode {
+            paintingDetailVC.rotationHidingMaskView.alpha = 1
+        }
         dismiss(animated: true, completion: nil)
     }
     

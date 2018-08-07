@@ -17,6 +17,7 @@ class PaintingDetailVC: UIViewController {
     @IBOutlet weak var paintingTitleLabel: UILabel!
     @IBOutlet weak var paintingArtistLabel: UILabel!
     @IBOutlet weak var paintingDateLabel: UILabel!
+    @IBOutlet weak var rotationHidingMaskView: UIView!
     
     enum SlideDirection { case previous ; case next }
     
@@ -30,6 +31,7 @@ class PaintingDetailVC: UIViewController {
     }
     
     func loadPaintingInfo() {
+        paintingDetailVC = self
         paintingImageView.image = UIImage(named: painting.imageName)
         paintingTitleLabel.text = painting.title
         paintingArtistLabel.text = painting.artist
@@ -37,12 +39,20 @@ class PaintingDetailVC: UIViewController {
     }
     
     func roundImageViewCorners(imageView: UIImageView) {
-        
         imageView.layer.borderColor = UIColor(displayP3Red: 150/255, green: 150/255, blue: 150/255, alpha: 1).cgColor
         imageView.layer.borderWidth = 1
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = paintingImageView.frame.width / 28
-        
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if fullScreenSetToLandscapeMode {
+            UIView.setAnimationsEnabled(false)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(0.1*Double(NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {
+                UIView.setAnimationsEnabled(true)
+                self.rotationHidingMaskView.alpha = 0
+            }
+        }
     }
     
     @IBAction func dismissToGallery(_ sender: Any) {
@@ -56,6 +66,7 @@ class PaintingDetailVC: UIViewController {
     @IBAction func presentFullScreenPaintingVC(_ sender: Any) {
         let fullScreenPaintingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FullScreenPaintingVC") as! FullScreenPaintingVC
         fullScreenPaintingVC.paintingImageView = UIImageView(image: UIImage(named: paintings[paintingIndex].imageName))
+        fullScreenSetToLandscapeMode = false
         present(fullScreenPaintingVC, animated: true, completion: nil)
     }
     
