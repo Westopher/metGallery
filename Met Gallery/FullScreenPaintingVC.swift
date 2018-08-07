@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FullScreenPaintingVC: UIViewController {
+class FullScreenPaintingVC: UIViewController, UIScrollViewDelegate {
     
     var paintingImageView: UIImageView!
 
@@ -16,11 +16,20 @@ class FullScreenPaintingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        paintingScrollView.contentSize = CGSize(width: paintingImageView.frame.width, height: paintingImageView.frame.height)
+        paintingScrollView.bounces = false
+        paintingScrollView.bouncesZoom = true
+        paintingScrollView.minimumZoomScale = 0.3
+        paintingScrollView.maximumZoomScale = 2
+        paintingScrollView.addSubview(paintingImageView)
     }
 
     @IBAction func dismissToPaintingDetail(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return paintingImageView
     }
     
 }
