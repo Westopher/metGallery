@@ -53,6 +53,11 @@ class FullScreenPaintingVC: UIViewController, UIScrollViewDelegate {
             default: break
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        appDelegate.allowedScreenOrientations = UIInterfaceOrientationMask.portrait
+        device.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+    }
 
     @IBAction func dismissToPaintingDetail(_ sender: Any) {
         dismiss(animated: true, completion: nil)
