@@ -48,6 +48,7 @@ class PaintingDetailVC: UIViewController {
     }
     
     @IBAction func lookupOnlineReference(_ sender: Any) {
+        application.open(URL(string: painting.onlineReference)!, options: [:], completionHandler: nil)
     }
     
     @IBAction func presentFullScreenPaintingVC(_ sender: Any) {
